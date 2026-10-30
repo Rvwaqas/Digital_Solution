@@ -20,8 +20,6 @@ const manrope = Manrope({
 const robotoSerif = Roboto_Serif({
   variable: "--font-roboto-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
