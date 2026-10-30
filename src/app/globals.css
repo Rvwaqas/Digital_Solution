@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #8581BD;
+  --primary-rgb: 133, 129, 189;
+  --primary-dark: #454270;
+  --primary-light: #9d99d1;
+  --secondary: #ffffff;
+  --accent: #8581BD;
+  --accent-light: rgba(133, 129, 189, 0.15);
+  --text-dark: #ffffff;
+  --text-muted: #9ca3af;
+  --bg-dark: #0b0914;
+  --bg-card: #100d1e;
+  --bg-card-hover: #19142c;
+  --border-dark: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--text-muted);
+  --color-dark: var(--bg-dark);
+  --color-card: var(--bg-card);
+  --font-space-grotesk: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-manrope: var(--font-manrope), "Manrope", sans-serif;
+  --font-roboto-serif: var(--font-roboto-serif), "Roboto Serif", serif;
+}
+
+body {
+  font-family: var(--font-manrope), "Manrope", sans-serif;
+  color: var(--text-muted);
+  background-color: #0b0914;
+  background-image: 
+    radial-gradient(ellipse 120% 70% at 50% -15%, rgba(133, 129, 189, 0.32), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 15% 25%, rgba(69, 66, 112, 0.3), transparent 65%),
+    radial-gradient(ellipse 90% 60% at 85% 45%, rgba(133, 129, 189, 0.26), transparent 65%),
+    radial-gradient(ellipse 80% 50% at 20% 70%, rgba(69, 66, 112, 0.32), transparent 65%),
+    radial-gradient(ellipse 100% 60% at 50% 95%, rgba(133, 129, 189, 0.35), transparent 70%),
+    linear-gradient(180deg, #130f24 0%, #0d0a1a 20%, #151128 45%, #0c0a18 70%, #17122e 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-serif-accent {
+  font-family: var(--font-roboto-serif), "Roboto Serif", serif;
+}
+
+/* Transitions */
+a, button {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ====================================================
+   SOFTY SOLUTIONS KEYFRAMES & ANIMATIONS
+   ==================================================== */
+
+@keyframes softyFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softyMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes softyMarqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-softy-marquee {
+  display: flex;
+  width: max-content;
+  animation: softyMarquee 35s linear infinite;
+}
+
+.animate-softy-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-softy-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: softyMarqueeReverse 35s linear infinite;
+}
+
+.animate-softy-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes dropBounceSettle {
+  0% {
+    opacity: 0;
+    transform: translateY(-240px) scale(0.85);
+  }
+  58% {
+    opacity: 1;
+    transform: translateY(28px) scale(1.05);
+  }
+  78% {
+    transform: translateY(-14px) scale(0.98);
+  }
+  90% {
+    transform: translateY(5px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-drop-bounce {
+  animation: dropBounceSettle 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Interactive Card Hover Effects */
+.softy-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  background-color: #090810;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.softy-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(133, 129, 189, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(133, 129, 189, 0.25), 0 0 20px rgba(69, 66, 112, 0.2);
+}
+
+/* Glassmorphism nav header (Dark) */
+.softy-header-glass-dark {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(133, 129, 189, 0.12);
+}
