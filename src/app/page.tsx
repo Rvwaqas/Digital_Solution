@@ -6,7 +6,7 @@ import SoftyMarqueeCross from "@/components/softy/SoftyMarqueeCross";
 import SoftyStrategy from "@/components/softy/SoftyStrategy";
 import SoftyAiSolutionsBanner from "@/components/softy/SoftyAiSolutionsBanner";
 import SoftyWhyUs from "@/components/softy/SoftyWhyUs";
-import SoftyGlobalPresence from "@/components/softy/SoftyGlobalPresence";
+
 
 import SoftyStats from "@/components/softy/SoftyStats";
 import SoftyFaq from "@/components/softy/SoftyFaq";
@@ -36,7 +36,7 @@ export default function Home() {
         <SoftyStrategy />
         <SoftyAiSolutionsBanner />
         <SoftyWhyUs />
-        <SoftyGlobalPresence />
+
 
         <SoftyStats />
         <SoftyFaq />
