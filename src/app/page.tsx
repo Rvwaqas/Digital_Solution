@@ -1,5 +1,4 @@
 import SoftyHero from "@/components/softy/SoftyHero";
-import SoftyPartners from "@/components/softy/SoftyPartners";
 import SoftyAbout from "@/components/softy/SoftyAbout";
 import SoftyInnovativeSolutions from "@/components/softy/SoftyInnovativeSolutions";
 import SoftyServices from "@/components/softy/SoftyServices";
@@ -33,7 +32,6 @@ export default function Home() {
       <SoftyChatWidget />
       <main className="flex-1 relative z-10">
         <SoftyHero />
-        <SoftyPartners />
         <SoftyAbout />
         <SoftyInnovativeSolutions />
         <SoftyServices />

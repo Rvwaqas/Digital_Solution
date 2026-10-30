@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import SoftyNavbar from "./SoftyNavbar";
 
 export default function SoftyHero() {
@@ -17,8 +15,6 @@ export default function SoftyHero() {
       {/* Background luxury gradient & radial ambient purple glow behind the card */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[750px] bg-[radial-gradient(ellipse_at_top,rgba(133,129,189,0.35)_0%,rgba(69,66,112,0.2)_45%,transparent_75%)] blur-3xl pointer-events-none"></div>
       <div className="absolute top-1/4 left-10 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(69,66,112,0.25)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
-
-
 
       {/* Full-Width Framed Card Container matching screenshot */}
       <div className="relative w-full min-h-[90vh] lg:min-h-[94vh] rounded-[24px] sm:rounded-[36px] overflow-hidden border border-white/15 shadow-[0_30px_90px_rgba(0,0,0,0.95)] flex flex-col justify-between">
@@ -53,7 +49,7 @@ export default function SoftyHero() {
         {/* Hero Bottom Content Area inside the card */}
         <div className="relative z-10 w-full px-6 sm:px-12 lg:px-16 pb-12 sm:pb-16 mt-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-            {/* Left Column: Badge, Big Bold Headline, and Action Buttons */}
+            {/* Left Column: Badge and Big Bold Headline */}
             <div className="lg:col-span-7 flex flex-col items-start">
               {/* Exact Badge: [✦ NEXT-GEN] AI-Powered Digital Agency */}
               <div
@@ -70,9 +66,9 @@ export default function SoftyHero() {
                 </span>
               </div>
 
-              {/* Huge Display Heading matching screenshot */}
+              {/* Huge Display Heading */}
               <h1
-                className={`font-['Space_Grotesk'] text-5xl sm:text-7xl lg:text-[82px] font-bold tracking-tight text-white leading-[1.04] mb-10 drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`font-['Space_Grotesk'] text-5xl sm:text-7xl lg:text-[82px] font-bold tracking-tight text-white leading-[1.04] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   mounted ? "opacity-100 translate-y-0 translate-x-0" : "opacity-0 translate-y-10 -translate-x-4"
                 }`}
                 style={{ transitionDelay: "300ms" }}
@@ -80,94 +76,19 @@ export default function SoftyHero() {
                 Smarter Digital. <br />
                 Stronger Brands.
               </h1>
-
-              {/* Action Buttons: [→ Start Your Project] [→ See Our Process] - from inner to outer */}
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5">
-                <Link
-                  href="#contact"
-                  className={`px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#8581BD] to-[#454270] hover:from-[#9d99d1] hover:to-[#555285] text-white text-sm font-semibold shadow-xl shadow-[#8581BD]/35 hover:scale-105 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center gap-2.5 ${
-                    mounted ? "opacity-100 translate-x-0 scale-100" : "opacity-0 -translate-x-8 scale-90"
-                  }`}
-                  style={{ transitionDelay: "500ms" }}
-                >
-                  <span>→</span>
-                  <span>Start Your Project</span>
-                </Link>
-
-                <Link
-                  href="#about"
-                  className={`px-7 py-3.5 rounded-xl bg-black/50 hover:bg-white/10 text-white text-sm font-semibold border border-white/25 backdrop-blur-md hover:border-white/40 hover:scale-105 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center gap-2.5 ${
-                    mounted ? "opacity-100 translate-x-0 scale-100" : "opacity-0 -translate-x-12 scale-90"
-                  }`}
-                  style={{ transitionDelay: "650ms" }}
-                >
-                  <span>→</span>
-                  <span>See Our Process</span>
-                </Link>
-              </div>
             </div>
 
-            {/* Right Column: Statement Paragraph (from Left) + Overlapping Avatars (from Right & opening from center) */}
+            {/* Right Column: Statement Paragraph */}
             <div className="lg:col-span-5 flex flex-col items-start lg:items-end justify-end">
               <div className="max-w-md text-left lg:text-left drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] overflow-hidden">
-                {/* Paragraph entering from LEFT side */}
                 <p
-                  className={`text-base sm:text-lg text-gray-100 leading-relaxed font-normal mb-6 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`text-base sm:text-lg text-gray-100 leading-relaxed font-normal transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
                   }`}
                   style={{ transitionDelay: "400ms" }}
                 >
                   We’re JAWA — the AI-fueled IT agency that blends creativity, code, and strategy to make brands impossible to ignore.
                 </p>
-
-                {/* 3 Overlapping Avatars opening/fanning out from center + 2000+ Happy Clients entering from RIGHT */}
-                <div
-                  className={`flex items-center gap-3.5 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-                  }`}
-                  style={{ transitionDelay: "600ms" }}
-                >
-                  <div className="flex -space-x-2.5 overflow-visible">
-                    <Image
-                      src="/images/softy/hero-avatar-1.jpg"
-                      alt="Happy Client 1"
-                      width={40}
-                      height={40}
-                      className={`inline-block h-10 w-10 rounded-full ring-2 ring-black object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.34,1.4,0.64,1)] ${
-                        mounted ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-6 scale-50"
-                      }`}
-                      style={{ transitionDelay: "750ms" }}
-                    />
-                    <Image
-                      src="/images/softy/hero-avatar-2.jpg"
-                      alt="Happy Client 2"
-                      width={40}
-                      height={40}
-                      className={`inline-block h-10 w-10 rounded-full ring-2 ring-black object-cover relative z-10 transition-all duration-[1200ms] ease-[cubic-bezier(0.34,1.4,0.64,1)] ${
-                        mounted ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                      }`}
-                      style={{ transitionDelay: "900ms" }}
-                    />
-                    <Image
-                      src="/images/softy/hero-avatar-3.jpg"
-                      alt="Happy Client 3"
-                      width={40}
-                      height={40}
-                      className={`inline-block h-10 w-10 rounded-full ring-2 ring-black object-cover relative z-20 transition-all duration-[1200ms] ease-[cubic-bezier(0.34,1.4,0.64,1)] ${
-                        mounted ? "opacity-100 translate-x-0 scale-100" : "opacity-0 -translate-x-6 scale-50"
-                      }`}
-                      style={{ transitionDelay: "1050ms" }}
-                    />
-                  </div>
-                  <span
-                    className={`font-['Space_Grotesk'] text-sm font-semibold text-white tracking-tight transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                      mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
-                    }`}
-                    style={{ transitionDelay: "850ms" }}
-                  >
-                    2000+ Happy Clients
-                  </span>
-                </div>
               </div>
             </div>
           </div>
