@@ -7,7 +7,7 @@ import SoftyStrategy from "@/components/softy/SoftyStrategy";
 import SoftyAiSolutionsBanner from "@/components/softy/SoftyAiSolutionsBanner";
 import SoftyWhyUs from "@/components/softy/SoftyWhyUs";
 import SoftyGlobalPresence from "@/components/softy/SoftyGlobalPresence";
-import SoftyBlog from "@/components/softy/SoftyBlog";
+
 import SoftyStats from "@/components/softy/SoftyStats";
 import SoftyFaq from "@/components/softy/SoftyFaq";
 import SoftyFooter from "@/components/softy/SoftyFooter";
@@ -37,7 +37,7 @@ export default function Home() {
         <SoftyAiSolutionsBanner />
         <SoftyWhyUs />
         <SoftyGlobalPresence />
-        <SoftyBlog />
+
         <SoftyStats />
         <SoftyFaq />
       </main>
