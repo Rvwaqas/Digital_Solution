@@ -5,11 +5,8 @@ import SoftyServices from "@/components/softy/SoftyServices";
 import SoftyMarqueeCross from "@/components/softy/SoftyMarqueeCross";
 import SoftyStrategy from "@/components/softy/SoftyStrategy";
 import SoftyAiSolutionsBanner from "@/components/softy/SoftyAiSolutionsBanner";
-import SoftyProjects from "@/components/softy/SoftyProjects";
 import SoftyWhyUs from "@/components/softy/SoftyWhyUs";
 import SoftyGlobalPresence from "@/components/softy/SoftyGlobalPresence";
-import SoftyTestimonials from "@/components/softy/SoftyTestimonials";
-import SoftyCareers from "@/components/softy/SoftyCareers";
 import SoftyBlog from "@/components/softy/SoftyBlog";
 import SoftyStats from "@/components/softy/SoftyStats";
 import SoftyFaq from "@/components/softy/SoftyFaq";
@@ -38,11 +35,8 @@ export default function Home() {
         <SoftyMarqueeCross />
         <SoftyStrategy />
         <SoftyAiSolutionsBanner />
-        <SoftyProjects />
         <SoftyWhyUs />
         <SoftyGlobalPresence />
-        <SoftyTestimonials />
-        <SoftyCareers />
         <SoftyBlog />
         <SoftyStats />
         <SoftyFaq />
